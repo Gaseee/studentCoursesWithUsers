@@ -1,0 +1,14 @@
+extends ../layout
+
+block content
+    div.form-container
+        h3 Login
+        form(action='/Login' method="post")
+            div.form-input
+                label(for="email") Email
+                input(name="email" id="email")
+            div.form-input
+                label(for="password") Password
+                input(type="password" name="password" id="password")
+            div.form-buttons
+                button.button.primary(type="submit") Login

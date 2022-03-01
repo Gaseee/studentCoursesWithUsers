@@ -1,0 +1,24 @@
+extends ../layout
+
+block content
+    div.form-container
+        form(action='/register-student' method="post")
+            div.form-input
+                label(for="email") Email
+                input(name="email" id="email")
+            div.form-input
+                label(for="password") Password
+                input(type="password" name="password" id="password")
+            div.form-input
+                label(for="first_name") First Name
+                input(name="first_name" id="first_name")
+            div.form-input
+                label(for="last_name") Last Name
+                input(name="last_name" id="last_name")
+            div.form-input
+                label(for="grade_level") Grade
+                select(name="grade_level" id="grade_level")
+                    each grade in [9, 10, 11, 12]
+                        option(value=grade) #{grade}
+            div.form-buttons
+                button.button.primary(type="submit") Save
