@@ -4,6 +4,8 @@ const courseController = require('../controllers/courseController.js');
 const studentController = require('../controllers/studentController.js');
 const userController = require('../controllers/userController.js');
 
+
+
 /* GET home page. */
 router.get('/', function(req, res, next) {
   res.render('index', { title: 'Express' });
@@ -16,7 +18,6 @@ router.post('/courses/edit/:id', courseController.updateCourse);
 router.get('/courses/add', courseController.renderAddForm);
 router.post('/courses/add', courseController.addCourse);
 router.get('/courses/delete/:id', courseController.deleteCourse);
-
 
 router.get('/students', studentController.viewAll);
 router.get('/students/profile/:id', studentController.viewProfile);
