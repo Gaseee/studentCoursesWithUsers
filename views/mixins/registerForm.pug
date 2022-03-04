@@ -1,7 +1,7 @@
 mixin registerForm(saveUrl, userType)
 
     div.form-container
-        form(action='saveUrl' method="post")
+        form(action=saveUrl method="post")
             div.form-input
                 label(for="email") Email
                 input(name="email" id="email")
